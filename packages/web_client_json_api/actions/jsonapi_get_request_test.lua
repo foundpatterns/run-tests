@@ -13,5 +13,4 @@ function test_equal (a, b)
 end
 
 test_equal(response.status, 200)
-log.info(response.body_raw)
---test_equal(response.body_raw.title, "delectus aut autem")
+test_equal(response.body.title, "delectus aut autem")
