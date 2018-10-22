@@ -1,9 +1,8 @@
 event: ["show_request"]
 priority: 1
 
-local info = (require "inspect")(request)
-log.debug(info)
+local inspect = require "inspect"
+local info = inspect(request)
+log.debug("request = " .. info)
 
-return {
-  body = info
-}
+return { body = info }
